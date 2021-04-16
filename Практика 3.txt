@@ -1,0 +1,69 @@
+1. 
+Последовательность простых чисел начинается так:
+2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97.
+
+var i = 1;
+console.log(`The prime numbers between 1 and 100 are:`)
+while (i <= 100) {
+  var flag = 0;
+  if (i == 1) {
+    console.log("1 ни является ни простым, ни составным числом.");
+  }
+  for (var number = 2; number < i; number++) {
+    if (i % number == 0) {
+      flag = 1;
+    }
+  }
+  if (i > 1 && flag == 0) {
+    console.log(i);
+  }
+  i++;
+}
+
+
+2.
+
+var cart = [{
+    title: "Skirt",
+    price: 100,
+    quantity: 1
+  },
+  {
+    title: "Pants",
+    price: 150,
+    quantity: 2
+  },
+  {
+    title: "Dress",
+    price: 100,
+    quantity: 1
+  },
+  {
+    title: "T-Shirt",
+    price: 50,
+    quantity: 3
+  }
+];
+
+console.log("These are items in your cart:");
+var totalPrice = 0;
+for (var product of cart) {
+  totalPrice += (product.price * product.quantity);
+  console.log(product.title + " - $" + product.price * product.quantity + " (" + product.quantity + " pcs)");
+}
+console.log("Total price: $" + totalPrice);
+
+4.
+ for (var i = 0; i <= 9; console.log(i++)) {}
+
+5.
+function getPyramid(str,rows) {
+  var string = "";
+  for (var i = 1; i <= rows; i++) {
+    string +=str;
+    console.log(string)
+  }
+}
+getPyramid("x",20);
+
+
