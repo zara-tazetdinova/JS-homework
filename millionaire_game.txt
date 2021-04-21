@@ -1,0 +1,43 @@
+var questions = [{
+    q: "Как в HTML сделать текст жирным?",
+    a1: "1. < br > жирный < /br>",
+    a2: "2. < p > жирный < /p>",
+    a3: "3. < strong > жирный < /strong>",
+    a4: "4. < a > жирный < /a>",
+    correct: 3
+  },
+  {
+    q: "С помощью какого тега следует разделять абзацы?",
+    a1: "1. < br >",
+    a2: "2. < p >",
+    a3: "3. < span >",
+    a4: "4. < b >",
+    correct: 2
+  },
+  {
+    q: "Как оформляется комментарий в HTML?",
+    a1: "1. // комментарий",
+    a2: "2. < !—комментарий-- >",
+    a3: "3. /* комментарий */",
+    a4: "4. # комментарий",
+    correct: 2
+  }
+];
+
+
+
+var money = 0;
+var correct = 0;
+var answer = 0;
+
+for (var i = 0; i < questions.length; i++) {
+  answer = +prompt("Вопрос " + (i + 1) + ":" + "\n\n" + questions[i].q + "\n" + questions[i].a1 + "\n" + questions[i].a2 + "\n" + questions[i].a3 + "\n" + questions[i].a4 + "\n\n" + 'Введите ваш ответ:')
+  if (answer == questions[i].correct) {
+    alert("Это правильный ответ. Сумма выйгрыша: " + (i + 1) * 1000);
+    correct++;
+  } else {
+    alert("Ответ неверный. Начните сначала.")
+    break;
+  }
+}
+alert('Поздравляем! Вы стали победителем игры!')
