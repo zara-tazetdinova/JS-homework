@@ -1,0 +1,29 @@
+
+.slider{
+	margin:50px auto;
+	width:50%;
+    border: 1px solid gray;
+}
+ 
+.img_box img{
+	width:100%;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+	border:none;
+	outline:none;
+	background:gray;
+	padding:10px 30px;
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer;
+    margin: 10px;
+}
+
+.btn:hover{
+	background: plum;
+}

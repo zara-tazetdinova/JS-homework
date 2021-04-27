@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<title>Big and Small Pictures</title>
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+	<div class="container">
+
+		<div class="small_pics">
+			<img src="one.jpg" onclick="change(this.src)">
+			<img src="two.jpg" onclick="change(this.src)">
+			<img src="three.jpg" onclick="error()">
+			<img src="four.jpg" onclick="change(this.src)">
+		</div>
+		<div class="big_pic">
+			<img src="" id="big_pic" alt = "big picture">
+		</div>
+	</div>
+
+	<script>
+		var change = function (src) {
+			document.getElementById('big_pic').src = src;
+		}
+		function error() {
+			document.querySelector('.big_pic').innerHTML = "Big picture not found.";
+		}
+
+	</script>
+</body>
+
+</html>
