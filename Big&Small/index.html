@@ -6,22 +6,26 @@
 <body>
 
 	<div class="container">
-		<div class="big_pic">
-			<img src="one.jpg" id="big_pic" alt="IMAGE">
-		</div>
 
 		<div class="small_pics">
-			<img src="one.jpg" onclick="change(this.src)" onerror="error()">
-			<img src="two.jpg" onclick="change(this.src)" onerror="error()">
-			<img src="three.jpg" onclick="change(this.src)" onerror="error()">
-			<img src="four.jpg" onclick="change(this.src)" onerror="error()">
+			<img src="one.jpg" onclick="change(this.src)">
+			<img src="two.jpg" onclick="change(this.src)">
+			<img src="three.jpg" onclick="error()">
+			<img src="four.jpg" onclick="change(this.src)">
+		</div>
+		<div class="big_pic">
+			<img src="" id="big_pic" alt = "big picture">
 		</div>
 	</div>
 
 	<script>
 		var change = function (src) {
-			document.getElementById('big_pic').src = src
+			document.getElementById('big_pic').src = src;
 		}
+		function error() {
+			document.querySelector('.big_pic').innerHTML = "Big picture not found.";
+		}
+
 	</script>
 </body>
 
